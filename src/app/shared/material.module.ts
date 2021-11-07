@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatToolbarModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
 
   ]
 })
