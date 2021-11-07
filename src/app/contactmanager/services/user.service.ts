@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { User } from '../models/user';
 
 import { tap } from 'rxjs/operators'
@@ -38,5 +38,12 @@ export class UserService {
 
   userById(id: number): User {
     return this.dataStore.users.find(user => user.id == id)
+  }
+
+  addUser(user: User): Observable<User> {
+    user.id = this.dataStore.users.length + 1;
+    this.dataStore.users.push(user);
+    this._users.next(Object.assign({}, this.dataStore).users);
+    return of(user)
   }
 }

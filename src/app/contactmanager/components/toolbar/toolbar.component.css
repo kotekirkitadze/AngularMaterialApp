@@ -7,6 +7,9 @@
 
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
 
 @media (max-width: 720px) {
     .toggle-sidenav{
